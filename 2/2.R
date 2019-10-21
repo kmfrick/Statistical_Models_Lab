@@ -3,7 +3,7 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
 # Ex 2
 
-print("Exercise 2")
+cat("\n***Exercise 2***\n")
 
 chol <- read.table("chol.txt", header=TRUE)
 chol.y <- chol$CHOL
@@ -14,7 +14,7 @@ print(anova(chol.model1))
 
 # Ex 3
 
-print("Exercise 3")
+cat("\n***Exercise 3***\n")
 
 auto.n <- 8
 auto.sum.x <- 90
@@ -48,16 +48,16 @@ auto.mse <- auto.sse / (auto.n - 2)
 
 auto.t <- auto.b1 / sqrt(auto.mse / (auto.sum.x.sq - auto.n * auto.mean.x ^ 2))
 auto.f <- auto.t ^ 2
-print(paste("b0 = ", format(auto.b0, digits=3)))
-print(paste("b1 = ", format(auto.b1, digits=3)))
-print(paste("R^2 = ", format(auto.r.sq, digits=3)))
-print(paste("toss = ", format(auto.t, digits=3)))
-print(paste("Foss = ", format(auto.f, digits=3)))
-print(paste("p-value = ", format(pf(auto.f, 1, auto.n - 2, lower.tail=FALSE), digits = 3)))
+cat(paste("b0 = ", format(auto.b0, digits=3)), "\n")
+cat(paste("b1 = ", format(auto.b1, digits=3)), "\n")
+cat(paste("R-squared = ", format(auto.r.sq, digits=3)), "\n")
+cat(paste("toss = ", format(auto.t, digits=3)), "\n")
+cat(paste("Foss = ", format(auto.f, digits=3)), "\n")
+cat(paste("p-value = ", format(pf(auto.f, 1, auto.n - 2, lower.tail=FALSE), digits = 3)), "\n")
 
 # Ex 4
 
-print("Exercise 4")
+cat("\n***Exercise 4***\n")
 
 slrm.b0 <- 0.721
 slrm.b1 <- -1.788
@@ -71,6 +71,6 @@ slrm.toss <- slrm.b1 / slrm.var.b1
 slrm.Foss <- slrm.toss ^ 2
 
 slrm.p <- pf(slrm.Foss, 1, slrm.n - 2, lower.tail=FALSE)
-print(paste("p-value = ", format(slrm.p, digits = 3)))
+cat(paste("p-value = ", format(slrm.p, digits = 3)), "\n")
 slrm.R.sq <- (slrm.Foss / (slrm.n - 2)) / (1 + (slrm.Foss / (slrm.n - 2)))
-print(paste("R-squared = ", format(slrm.R.sq, digits = 3)))
+cat(paste("R-squared = ", format(slrm.R.sq, digits = 3)), "\n")
