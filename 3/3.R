@@ -3,7 +3,7 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
 # Ex 2
 
-cat("\n\nExercise 2\n\n")
+cat("\n\n***Exercise 2***\n\n")
 chol <- read.table("chol.txt",header=TRUE)
 
 chol.model <- lm(CHOL ~ (Age + BMI), chol)
@@ -30,7 +30,7 @@ cat("[FWL] BMI: b2 = ", chol.b2, "\n")
 
 # Ex 3
 
-cat("\n\nExercise 3\n\n")
+cat("\n\n***Exercise 3***\n\n")
 house <- read.table("house2.txt",header=TRUE)
 house.model <- lm(Price ~ (Taxes + Beds + Baths + Size), house)
 cat("Intercept: b0 = ", house.model$coefficients[1], "\n")
@@ -47,7 +47,7 @@ cat("[FWL] Taxes: b1 = ", house.b1, "\n")
 
 # Ex 4
 
-cat("\n\nExercise 4\n\n")
+cat("\n\n***Exercise 4***\n\n")
 ship <- read.table("shipdept.txt", header=TRUE)
 ship.mean.lab <- 93.550
 ship.svar.lab <- 362.576

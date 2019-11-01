@@ -3,7 +3,7 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
 # Ex 2
 
-cat("\n***Exercise 2***\n")
+cat("\n\n***Exercise 2***\n\n")
 
 chol <- read.table("chol.txt", header=TRUE)
 chol.y <- chol$CHOL
@@ -14,7 +14,7 @@ print(anova(chol.model1))
 
 # Ex 3
 
-cat("\n***Exercise 3***\n")
+cat("\n\n***Exercise 3***\n\n")
 
 auto.n <- 8
 auto.sum.x <- 90
@@ -57,7 +57,7 @@ cat(paste("p-value = ", format(pf(auto.f, 1, auto.n - 2, lower.tail=FALSE), digi
 
 # Ex 4
 
-cat("\n***Exercise 4***\n")
+cat("\n\n***Exercise 4***\n\n")
 
 slrm.b0 <- 0.721
 slrm.b1 <- -1.788
